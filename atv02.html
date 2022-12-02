@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1>Cadastro de candidatos</H1>
+    <div id="resultado"></div>
+    <script>
+        let numcandidato = 1;
+        let nome = 0;
+        let idade
+        let sexo = 0;
+        let experiencia = 0;
+        let resul = "";
+        let QTDcandidatos = "";
+
+        while (numcandidato != 0) {
+
+            numcandidato = prompt("numero do candidato(a)")
+            if (numcandidato != 0) {
+
+
+                idade = Number(prompt("idade do candidato(a)"))
+
+                if (idade >= 18) {
+
+                    nome = prompt("nome do candidato(a)")
+                    sexo = prompt("sexo do candidato( 1-masculino, 2-feminino)")
+
+                    if (sexo == 1) {
+                        sexo = "masculino"
+                    } else {
+                        sexo = "feminino"
+                    }
+
+                    experiencia = prompt("tem experiencia na profissão? (1-sim ou 2-não)")
+
+                    if (experiencia == 1) {
+                        experiencia = "sim"
+                    } else {
+                        experiencia = "não"
+                    }
+
+                    QTDcandidatos++
+
+                    resul += "numero do candidato(a): " + numcandidato + "</br>Nome: " + nome + "</br>idade: " + idade +
+                        "</br>sexo: " + sexo + "</br>Experiença na profissão: " + experiencia + "</br>";
+                }
+            }
+
+        }
+
+
+        document.getElementById("resultado").innerHTML = "quantidade de candidatos: " + QTDcandidatos + "</br>" + resul ;
+    </script>
+
+</body>
+
+</html>

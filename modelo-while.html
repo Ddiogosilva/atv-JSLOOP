@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modelo</title>
+</head>
+
+<body>
+
+    <h1>usando while</h1>
+    <div id="resul"></div>
+    <script>
+        let matricula = 1;
+        let nota1 = 0;
+        let nota2 = 0;
+        let nota3 = 0;
+        let nota4 = 0;
+        let resultado= "";
+        
+
+
+        while (matricula != 0) {
+
+            matricula = Number(prompt("digite o numero da matricula, ou zero para sair "))
+
+            if (matricula!=0) {
+                
+           
+            nota1 = Number(prompt("digite a nota 1"))
+            nota2 = Number(prompt("digite a nota 2"))
+            nota3 = Number(prompt("digite a nota 3"))
+            nota4 = Number(prompt("digite a nota 4"))
+            
+
+            resultado += "matricula: " + matricula + "</br>"+
+            "nota1: " + nota1 + "</br>" +
+            "nota2: " + nota2 + "</br>" +
+            "nota3: " + nota3+ "</br>" +
+            "nota4: " + nota4 + "</br>" 
+        }
+        }
+            document.getElementById("resul").innerHTML = resultado
+            
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="resultado"></div>
+    <script>
+        let QTDpecas = prompt("quantidade de peças fabricadas no dia?")
+        let pecas 
+        let aprovado=0;
+        let reprovado=0;
+        let resul ="";
+
+        for (let index = 0; index <= QTDpecas; index++) {
+
+            pecas = prompt("digite 1 para aprovado e 2 para reprovado");
+            
+            if (pecas == 1) {
+
+                aprovado += 1  
+            }
+            
+            if (pecas == 2) {
+                
+                reprovado += 1  
+            }
+
+
+            resul = "quantidade aprovada: " + aprovado + "</br>" + "quantidade reprovada: " + reprovado + "</br>total de peças avaliadas: " + (aprovado + reprovado) ;
+        }
+
+        document.getElementById("resultado").innerHTML = resul
+
+    </script>
+
+</body>
+
+</html>
